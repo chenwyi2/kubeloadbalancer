@@ -1,4 +1,4 @@
-module kubeloadbalancer
+module github.com/chenwyi2/kubeloadbalancer
 
 go 1.19
 
