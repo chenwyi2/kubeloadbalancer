@@ -93,7 +93,6 @@ func parseStanza(c *caddy.Controller) (*KubeLoadBalancer, error) {
 }
 
 func (k *KubeLoadBalancer) setWatch(ctx context.Context) {
-	// define Pod controller and reverse lookup indexer
 	k.indexer, k.controller = cache.NewIndexerInformer(
 		&cache.ListWatch{
 			ListFunc: func(o meta.ListOptions) (runtime.Object, error) {
