@@ -92,6 +92,9 @@ func parseStanza(c *caddy.Controller) (*KubeLoadBalancer, error) {
 	return kps, nil
 }
 
+// Provide 2 Indexer
+// name: service name in all namespaces. Assume that there are no duplicate service names.
+// namewithns: service name and namespace name. example: service.namespace.zone
 func (k *KubeLoadBalancer) setWatch(ctx context.Context) {
 	k.indexer, k.controller = cache.NewIndexerInformer(
 		&cache.ListWatch{

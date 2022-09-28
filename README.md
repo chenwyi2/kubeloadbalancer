@@ -2,7 +2,7 @@
 
 ## Name
 
-*kubeloadbalancer* - create records for Kubernetes LoadBalancer type Service.
+*kubeloadbalancer* - create records for Kubernetes LoadBalancer type Services.
 
 ## Description
 
@@ -46,7 +46,7 @@ This plugin also requires the _kubeapi_ plugin, which should be added to the end
   kubeloadbalancer:github.com/chenwyi2/kubeloadbalancer
   kubeapi:github.com/coredns/kubeapi
   ```
-  *Can't got get with bitbucket because it's not a valid go pacakge repository*
+  *Can't got get from Bitbucket which is not a valid go pacakge repository*
 
 ## Ready
 
@@ -55,7 +55,7 @@ from the Kubernetes API.
 
 ## Examples
 
-Use Service's names to answer lookups in the zone `md-pv.saicmotortest.com.`.
+Use Service's Status.loadbalancer.ingress.ip to answer ServiceName lookups in the zone `md-pv.saicmotortest.com.`.
 
 ```
 md-pv.saicmotortest.com:53 {

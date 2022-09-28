@@ -84,6 +84,7 @@ func (k *KubeLoadBalancer) ServeDNS(ctx context.Context, w dns.ResponseWriter, r
 	switch len(serviceSegments) {
 	case 2:
 		// get the service by key name from the indexer
+		// service/namespace
 		serviceKey := strings.Join([]string{serviceSegments[1], "/", serviceSegments[0]}, "")
 
 		items, err = k.indexer.ByIndex("namewithns", serviceKey)
